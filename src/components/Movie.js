@@ -9,17 +9,17 @@ const Movie = ({ movie }) => {
         movie.Poster === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : movie.Poster;
     return (
         <div className="movie">
+          <a style={{color: '#66FCF1',textDecoration: 'none'}} target='_blank' href={`https://www.imdb.com/title/${movie.imdbID}/`}>
             <h2>{movie.Title}</h2>
             <div>
-            <a target='_blank' href={`https://www.imdb.com/title/${movie.imdbID}/`}>
                 <img
                     width="200"
                     alt={`The movie title: ${movie.Title}`}
                     src={poster}
                 />
-                </a>
             </div>
             <p>{movie.Year}</p>
+          </a>
         </div>
     );
 };
