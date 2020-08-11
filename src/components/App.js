@@ -5,7 +5,7 @@ import Movie from "./Movie";
 import Search from "./Search";
 
 
-const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=b3b2e80f"; // you should replace this with yours
+const MOVIE_API_URL = "https://www.omdbapi.com/?s=evil+dead&apikey=b3b2e80f";
 
 const initialState = {
   loading: true,
@@ -78,12 +78,12 @@ const App = () => {
 
     return (
      <div className="App">
-      <Header text="HOOKED" />
+      <Header text="MovieIQ" />
       <Search search={search} />
-      <p className="App-intro">Sharing a few of our favorite movies</p>
+      <p className="App-intro">The Movies we watch</p>
       <div className="movies">
         {loading && !errorMessage ? (
-         <span>loading...</span>
+         <span>Loading...</span>
          ) : errorMessage ? (
           <div className="errorMessage">{errorMessage}</div>
         ) : (
